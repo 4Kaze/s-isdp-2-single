@@ -1,0 +1,4 @@
+catch all java.lang.ArrayIndexOutOfBoundsException
+run
+eval k+1
+eval tab.length
