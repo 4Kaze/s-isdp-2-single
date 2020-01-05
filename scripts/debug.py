@@ -1,7 +1,7 @@
 import pexpect
 import sys
 
-java = pexpect.spawn("java -Xdebug -agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=8080 -classpath ../target/classes pl/lodz/p/it/isdp/Start 10")
+java = pexpect.spawn("java -Xdebug -agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=8080 -classpath ../target/classes pl/lodz/p/it/isdp/Start 5")
 java.expect(['8080'])
 
 debugger = pexpect.spawn("jdb -connect com.sun.jdi.SocketAttach:port=8080 -sourcepath src/main/java/", encoding='utf-8')

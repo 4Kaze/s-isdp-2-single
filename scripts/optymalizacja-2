@@ -1,0 +1,16 @@
+stop in pl.lodz.p.it.isdp.SortTabNumbers.sort
+run
+set tab[0] = 10
+set tab[1] = 9
+set tab[2] = 6
+set tab[3] = 4
+set tab[4] = 1
+stop at pl.lodz.p.it.isdp.SortTabNumbers:33
+run
+dump tab
+run
+dump tab
+run
+dump tab
+run
+dump tab
