@@ -1,0 +1,6 @@
+stop at pl.lodz.p.it.isdp.Start:22
+run
+eval sortExample.checkMinOrderSort()
+stop in pl.lodz.p.it.isdp.SortTabNumbers.checkMinOrderSort
+run
+dump tab
