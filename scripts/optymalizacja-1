@@ -1,0 +1,8 @@
+stop in pl.lodz.p.it.isdp.SortTabNumbers.sort
+run
+set tab[0] = 1
+set tab[1] = 1
+stop in pl.lodz.p.it.isdp.SortTabNumbers.swap
+run
+eval tab[i]
+eval tab[j]

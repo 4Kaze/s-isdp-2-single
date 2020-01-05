@@ -30,9 +30,9 @@ public class SortTabNumbers {
      */
     public void sort() {
         for (int i = 0; i < tab.length; i++) {
-            for (int j = 0; j < tab.length; j++) {
-                if (tab[i] <= tab[j]) {
-                    swap(i, j);
+            for (int j = 0; j < tab.length-1; j++) {
+                if (tab[j] >= tab[j+1]) {
+                    swap(j, j+1);
                 }
             }
         }
