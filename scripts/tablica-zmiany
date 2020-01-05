@@ -1,0 +1,9 @@
+stop at pl.lodz.p.it.isdp.SortTabNumbers:16
+run
+dump tab
+set tab[0]= 0-1
+clear pl.lodz.p.it.isdp.SortTabNumbers:16
+stop at pl.lodz.p.it.isdp.SortTabNumbers:17
+run
+run
+dump tab
