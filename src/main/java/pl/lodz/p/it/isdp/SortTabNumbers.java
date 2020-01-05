@@ -22,10 +22,16 @@ public class SortTabNumbers {
      * W metodzie należy zminimalizować liczbę wykonywanych porównań
      * opdpowiednio ustalając wartości początkową dla zmienej j.
      */
+
+    /*
+    * W obecnej formie skryptu nie można zoptymalizować.
+    * Aby stało się to możliwe, należy zamienić sprawdzane indeksy tablicy tak aby wskazywały na elementy,
+    * które znajdują się obok siebie.
+     */
     public void sort() {
         for (int i = 0; i < tab.length; i++) {
             for (int j = 0; j < tab.length; j++) {
-                if (tab[i] >= tab[j]) {
+                if (tab[i] <= tab[j]) {
                     swap(i, j);
                 }
             }
