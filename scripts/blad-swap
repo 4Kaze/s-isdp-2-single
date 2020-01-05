@@ -1,0 +1,9 @@
+stop in pl.lodz.p.it.isdp.SortTabNumbers.swap
+run
+run
+locals
+print tab[1]
+print tab[0]
+run
+print tab[1]
+print tab[0]
