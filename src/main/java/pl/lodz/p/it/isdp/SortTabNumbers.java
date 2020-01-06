@@ -52,6 +52,10 @@ public class SortTabNumbers {
         }
         return true;
     }
+    
+    public long[] getTab() {
+        return this.tab;
+    }
 
     @Override
     public String toString() {

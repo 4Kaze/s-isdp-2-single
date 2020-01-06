@@ -12,6 +12,10 @@
             <properties>
                 <exec.args>-classpath %classpath ${packageClassName} 123</exec.args>
                 <exec.executable>java</exec.executable>
+                <Env.DERBY_NAME>isdp</Env.DERBY_NAME>
+                <Env.DERBY_PASS>isdp</Env.DERBY_PASS>
+                <Env.DERBY_USER>isdp</Env.DERBY_USER>
+                <Env.DERBY_HOST>localhost</Env.DERBY_HOST>
             </properties>
         </action>
         <action>
