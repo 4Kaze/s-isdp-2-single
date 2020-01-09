@@ -2,7 +2,6 @@ package pl.lodz.p.it.isdp;
 
 import java.sql.Connection;
 import java.sql.DatabaseMetaData;
-import java.util.Date;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -10,7 +9,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
-import javafx.util.converter.LocalDateTimeStringConverter;
 
 /**
  *
@@ -49,7 +47,7 @@ public class DBConnector{
     
     public void putSortedTable(long[] tab) throws SQLException{
         Timestamp date = Timestamp.valueOf(LocalDateTime.now());
-        PreparedStatement insertNumbers = null;
+        PreparedStatement insertNumbers;
         String insertNumbersString = "insert into sorts(numbers, sortDate)  values (?, ?)";
         con.setAutoCommit(false);
         insertNumbers = con.prepareStatement(insertNumbersString);
