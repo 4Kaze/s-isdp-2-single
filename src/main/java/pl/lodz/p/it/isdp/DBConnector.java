@@ -47,10 +47,9 @@ public class DBConnector{
     
     public void putSortedTable(long[] tab) throws SQLException{
         Timestamp date = Timestamp.valueOf(LocalDateTime.now());
-        PreparedStatement insertNumbers;
         String insertNumbersString = "insert into sorts(numbers, sortDate)  values (?, ?)";
         con.setAutoCommit(false);
-        insertNumbers = con.prepareStatement(insertNumbersString);
+        PreparedStatement insertNumbers = con.prepareStatement(insertNumbersString);
 
         StringBuilder s = new StringBuilder();
         for (long i : tab) {
@@ -61,6 +60,7 @@ public class DBConnector{
         insertNumbers.setTimestamp(2, date);
         insertNumbers.execute();
         con.commit();
+        insertNumbers.close();
     }
     
     public void checkForConnection(){
