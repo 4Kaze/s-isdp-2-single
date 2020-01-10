@@ -34,6 +34,7 @@ public class DBConnector{
                 + "numbers long varchar not null, "
                 + "sortDate timestamp  not null )";
         stmt.execute(query);
+        stmt.close();
     }
     
     public void checkForTable() throws SQLException {
